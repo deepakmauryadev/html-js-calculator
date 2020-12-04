@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">Calculator.io</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            
+            <li>
+             	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                	Log in
+              	</a>
+              	<form class="dropdown-menu p-4">
+                	<div class="form-group">
+                  		<label for="exampleDropdownFormEmail2">Email address</label>
+                  		<input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                	</div>
+                	<div class="form-group">
+                  		<label for="exampleDropdownFormPassword2">Password</label>
+                  		<input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                	</div>
+                	<div class="form-group">
+                  		<div class="form-check">
+                    		<input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                    		<label class="form-check-label" for="dropdownCheck2">
+                      			Remember me
+                    		</label>
+                  		</div>
+                	</div>
+                	<button type="submit" class="btn btn-primary" onclick="">Log in</button>
+            	</form>
+            </li>
+            <li>
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                	Sign up
+              	</a>
+              	<form class="dropdown-menu p-4">
+                	<div class="form-group">
+                  		<label for="exampleDropdownFormEmail2">Email address</label>
+                  		<input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+					</div>
+					<div class="form-group">
+						<label for="exampleDropdownFormEmail2">Username</label>
+						<input type="email" class="form-control" placeholder="Username">
+				  	</div>
+                	<div class="form-group">
+                  		<label for="exampleDropdownFormPassword2">Password</label>
+                  		<input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+					</div>
+					<div class="form-group">
+						<label for="exampleDropdownFormPassword2">Confirm Password</label>
+						<input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+				  	</div>
+                	<div class="form-group">
+                  		<div class="form-check">
+                    		<input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                    		<label class="form-check-label" for="dropdownCheck2">
+                      			Keep me logged in
+                    		</label>
+                  		</div>
+                	</div>
+                	<button type="submit" class="btn btn-primary" onclick="">Sign in</button>
+            	</form>
+			</li>
+          	</ul>
+          	
+        </div>
+	</nav>
+	
+	<div class="calculator">
+		<form name="form">
+			<input class="calc_screen" name="calc_screen" type="text">
+		</form>
+		<table>
+			<tr>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="AC" onclick="all_clear()"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="C" onclick="all_clear()"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="%" onclick="insert('%')"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="/" onclick="insert('/')"></td>
+			</tr>
+			<tr>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="9" onclick="insert(9)"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="8" onclick="insert(8)"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="7" onclick="insert(7)"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="x" onclick="insert('*')"></td>
+			</tr>
+			<tr>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="6" onclick="insert(6)"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="5" onclick="insert(5)"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="4" onclick="insert(4)"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="-" onclick="insert('-')"></td>
+			</tr>
+			<tr>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="3" onclick="insert(3)"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="2" onclick="insert(2)"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="1" onclick="insert(1)"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="+" onclick="insert('+')"></td>
+			</tr>
+			<tr>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="." onclick="insert('.')"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="0" onclick="insert(0)"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="<" onclick="back()"></td>
+				<td><input class="btn btn-outline-primary" id="buttons" type="button" value="=" onclick="result()"></td>
+			</tr>
+		</table>
+	</div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./javascript/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: blueviolet;
+}
+
+.calculator {
+    padding: 10px;
+    position: absolute;
+    top: 22%;
+    left: 30%;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+.calc_screen {
+    font-family: Fira Code;
+    text-align: right;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 4px;
+    font-size: 40px;
+    height: 80px;
+    width: 511px;
+    border: 2px solid skyblue;
+}
+
+.calc_screen[type='text'] {
+    background-color: rgb(142, 172, 255);
+}
+
+#buttons {
+    width: 120px;
+    height: 60px;
+    font-size: 25px;
+    margin: 5px;
+    color: rgba(255, 255, 255, 0.856);
+    font-family: Fira Code;
+}
